@@ -1,0 +1,23 @@
+.layout::before,
+.layout::after {
+	content: "";
+	display: table-cell;
+	width: 100%;
+}
+
+.layout {
+	height: 100%;
+	margin: 0 2rem;
+}
+
+@media (min-width: 40em) {
+	.layout {
+		margin: 0 9rem;
+	}
+}
+
+.layout--centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

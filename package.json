@@ -1,15 +1,27 @@
 {
-  "name": "image-uploader",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.5.3",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+	"name": "image-uploader",
+	"version": "0.1.0",
+	"private": true,
+	"scarfSettings": {
+		"enabled": false
+	},
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development node server.js",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.4.0",
+		"express": "^4.17.1",
+		"multer": "^1.4.2",
+		"next": "9.5.3",
+		"next-redux-wrapper": "^6.0.2",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"react-redux": "^7.2.1",
+		"redux": "^4.0.5"
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.2"
+	}
 }

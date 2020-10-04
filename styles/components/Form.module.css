@@ -1,0 +1,40 @@
+.form {
+	max-width: 22.3333rem;
+	padding: 2rem 1.7777rem;
+	margin: 0 auto;
+	background: #fafafb;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 0.6666rem;
+}
+
+.form_title,
+.form_subtitle {
+	line-height: inherit;
+	text-align: center;
+}
+
+.form_title {
+	font-size: 1rem;
+	margin: 0 0 1.125rem;
+}
+
+.form_subtitle {
+	font-size: 0.5555rem;
+	color: #828282;
+	margin: 0 0 1.6666rem;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 1rem;
+}
+
+.light-grey {
+	color: #bdbdbd;
+}
+
+.form_subtitle:last-child,
+.form_group:last-child {
+	margin: 0;
+}

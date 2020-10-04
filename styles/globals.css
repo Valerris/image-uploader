@@ -1,16 +1,48 @@
+:root {
+	font-family: "Poppins", sans-serif;
+	font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1380 - 320));
+	line-height: 1.5;
+	letter-spacing: -0.035em;
+	min-height: 100%;
+	height: 1px;
+}
+
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+#__next {
+	padding: 0;
+	margin: 0;
+}
+
+body,
+#__next {
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1,
+h4,
+p {
+	font-weight: 500;
+}
+
+p {
+	font-size: 1rem;
+	line-height: inherit;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+img {
+	display: block;
+	width: 100%;
+	height: auto;
 }

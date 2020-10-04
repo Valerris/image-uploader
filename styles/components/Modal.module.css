@@ -1,0 +1,16 @@
+.modal {
+	padding: 2rem 1.7777rem;
+	min-width: 22.2222rem;
+	background: #fafafb;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 0.6666rem;
+}
+
+.modal_title {
+	color: #4f4f4f;
+	margin: 0 0 1.6666rem;
+}
+
+.modal_title:last-child {
+	margin: 0;
+}

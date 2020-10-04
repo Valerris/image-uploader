@@ -1,0 +1,28 @@
+.loader {
+	position: relative;
+	width: 100%;
+	height: 0.3333rem;
+	background: #f2f2f2;
+	overflow: hidden;
+}
+
+.loader_indicator {
+	position: absolute;
+	top: 0;
+	left: -5.5555rem;
+	width: 5.5555rem;
+	height: 0.3333rem;
+	background: #2f80ed;
+	border-radius: 0.4444rem;
+	animation: loading 2.75s linear infinite;
+	will-change: left;
+}
+
+@keyframes loading {
+	from {
+		left: -5.5555rem;
+	}
+	to {
+		left: 200%;
+	}
+}

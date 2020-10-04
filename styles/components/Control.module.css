@@ -1,0 +1,42 @@
+.dropArea--over {
+	background-color: hsl(216, 38%, 77%);
+	border-color: hsl(215, 81%, 67%);
+}
+
+.control_dropArea {
+	width: 100%;
+	min-height: 12.1666rem;
+	background: #f6f8fb no-repeat center 2rem url("/images/image.svg");
+	border: 1px dashed #97bef4;
+	border-radius: 0.6666rem;
+	cursor: pointer;
+}
+
+.control_dropArea_placeholder {
+	color: #bdbdbd;
+	font-size: 0.6666rem;
+	text-align: center;
+	margin: 9rem auto 2.1666rem;
+}
+
+.control_file {
+	display: inline-block;
+	width: auto;
+	min-width: 5.5555rem;
+	padding: 0.4444rem 0.8888rem;
+	margin: 0 auto;
+	font-size: 0.6666rem;
+	color: #fff;
+	background: #2f80ed;
+	border-radius: 0.4444rem;
+	cursor: pointer;
+}
+
+.control_file--hidden {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
