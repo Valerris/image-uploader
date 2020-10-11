@@ -1,0 +1,14 @@
+.image {
+	height: 12.4444rem;
+	overflow: hidden;
+	margin: 0 0 1.3888rem;
+}
+
+.image:last-child {
+	margin-bottom: 0;
+}
+
+.image > img {
+	object-fit: cover;
+	border-radius: 0.4444rem;
+}

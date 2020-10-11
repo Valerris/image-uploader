@@ -6,7 +6,7 @@
 		"enabled": false
 	},
 	"scripts": {
-		"dev": "cross-env NODE_ENV=development node server.js",
+		"dev": "cross-env NODE_ENV=development node server/server.js",
 		"build": "next build",
 		"start": "next start"
 	},

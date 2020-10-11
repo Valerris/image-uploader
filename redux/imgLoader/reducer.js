@@ -5,7 +5,7 @@ const SLICE_NAME = "imgLoader";
 
 export const uploadImg = createAsyncThunk(
 	`${SLICE_NAME}/uploadImg`,
-	async (file, { dispatch }) => {
+	async (file, thunkAPI) => {
 		const fd = new FormData();
 
 		fd.append("file", file, file.name);
@@ -14,6 +14,10 @@ export const uploadImg = createAsyncThunk(
 			method: "POST",
 			body: fd,
 		});
+
+		if (response.status < 200 || response.status > 299) {
+			return Promise.reject(response.statusText);
+		}
 
 		return response.json();
 	}
@@ -33,12 +37,17 @@ const slice = createSlice({
 	extraReducers: {
 		[uploadImg.pending]: (state, action) => {
 			state.loading = true;
+			state.error = null;
 		},
 		[uploadImg.fulfilled]: (state, action) => {
 			state.loading = false;
+			state.uploaded = true;
+			state.file = action.payload;
+			state.error = null;
 		},
 		[uploadImg.rejected]: (state, action) => {
 			state.loading = false;
+			state.error = action.error;
 		},
 	},
 });

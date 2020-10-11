@@ -1,7 +1,9 @@
+const path = require("path");
 const express = require("express");
 const next = require("next");
 const multer = require("multer");
-const path = require("path");
+const root = require("./util/root");
+const errorMW = require("./mw/error");
 const dev = process.env.NODE_ENV !== "production";
 
 const app = next({ dev });
@@ -9,7 +11,7 @@ const handle = app.getRequestHandler();
 
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, path.resolve(__dirname, "uploads/images"));
+		cb(null, path.resolve(root, "uploads/images"));
 	},
 	filename: function (req, file, cb) {
 		cb(null, Date.now() + "-" + file.originalname);
@@ -34,7 +36,7 @@ app
 
 		server.use(
 			"/static",
-			express.static(path.resolve(__dirname, "uploads"))
+			express.static(path.resolve(root, "uploads"))
 		);
 
 		server.post(
@@ -43,10 +45,16 @@ app
 			(req, res, next) => {
 				const { file } = req;
 
+				if (!file) {
+					const err = new Error("Unsupported media type");
+
+					err.statusCode = 415;
+
+					throw err;
+				}
+
 				res.json({
-					message: file
-						? "successfully saved the file."
-						: "no message",
+					filepath: `/static/images/${file.filename}`,
 				});
 			}
 		);
@@ -54,6 +62,8 @@ app
 		server.get("*", (req, res, next) => {
 			return handle(req, res);
 		});
+
+		server.use(errorMW);
 
 		server.listen(3030, (err) => {
 			if (err) throw err;

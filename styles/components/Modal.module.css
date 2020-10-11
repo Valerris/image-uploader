@@ -1,6 +1,7 @@
 .modal {
 	padding: 2rem 1.7777rem;
-	min-width: 22.2222rem;
+	max-width: 22.3333rem;
+	margin: 0 auto;
 	background: #fafafb;
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 	border-radius: 0.6666rem;
@@ -13,4 +14,7 @@
 
 .modal_title:last-child {
 	margin: 0;
+}
+
+.modal_body {
 }

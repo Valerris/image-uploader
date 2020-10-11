@@ -3,7 +3,7 @@ import Control from "components/Control/Control";
 import styles from "styles/components/Form.module.css";
 
 export default function Form(props) {
-	const { formTitle, clicked } = props;
+	const { formTitle } = props;
 
 	const title = formTitle ? (
 		<div>
@@ -34,7 +34,7 @@ export default function Form(props) {
 				</div>
 			</div>
 			<div className={styles["form_group"]}>
-				<Control controlType="file" clicked={clicked} />
+				<Control controlType="file" />
 			</div>
 		</form>
 	);

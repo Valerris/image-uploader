@@ -1,4 +1,6 @@
 export default {
 	loading: false,
-	fileSelected: null,
+	uploaded: false,
+	file: null,
+	error: null,
 };

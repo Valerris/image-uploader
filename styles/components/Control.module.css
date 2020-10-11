@@ -1,6 +1,12 @@
-.dropArea--over {
-	background-color: hsl(216, 38%, 77%);
-	border-color: hsl(215, 81%, 67%);
+.control {
+	background: #f6f8fb;
+	border: 1px solid #e0e0e0;
+	border-radius: 0.4444rem;
+	margin: 0 0 1.3888rem;
+}
+
+.control:last-child {
+	margin-bottom: 0;
 }
 
 .control_dropArea {
@@ -12,6 +18,11 @@
 	cursor: pointer;
 }
 
+.control_dropArea--over {
+	background-color: hsl(216, 38%, 77%);
+	border-color: hsl(215, 81%, 67%);
+}
+
 .control_dropArea_placeholder {
 	color: #bdbdbd;
 	font-size: 0.6666rem;
@@ -20,7 +31,7 @@
 }
 
 .control_file {
-	display: inline-block;
+	/* display: inline-block;
 	width: auto;
 	min-width: 5.5555rem;
 	padding: 0.4444rem 0.8888rem;
@@ -29,7 +40,7 @@
 	color: #fff;
 	background: #2f80ed;
 	border-radius: 0.4444rem;
-	cursor: pointer;
+	cursor: pointer; */
 }
 
 .control_file--hidden {
@@ -39,4 +50,21 @@
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+.control_clipboard {
+	display: flex;
+	place-items: center;
+}
+
+.control_clipboard_content {
+	width: 100%;
+	font-size: 0.4444rem;
+	padding: 0.6111rem 0.7776rem 0.6111rem 0.3888rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border: none;
+	background: transparent;
+	color: inherit;
 }
