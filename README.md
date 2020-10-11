@@ -14,6 +14,10 @@
 
 ![image-uploader-screen](https://user-images.githubusercontent.com/49908329/95684184-794fcd00-0bf8-11eb-9aaf-88afa4318cb5.png)
 
+![image-uploader-screen1](https://user-images.githubusercontent.com/49908329/95684438-781f9f80-0bfa-11eb-8574-990e07bf363d.png)
+
+![image-uploader-screen2](https://user-images.githubusercontent.com/49908329/95684442-82da3480-0bfa-11eb-82a2-394cce0fad90.png)
+
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
@@ -54,4 +58,4 @@ $ npm start
 
 ## Contact
 
-- GitHub [@your-username](https://github.com/Valerris)
+- GitHub [@valerris](https://github.com/Valerris)
